@@ -1,0 +1,34 @@
+<div class="container-imc">
+  <div class="calculadora">
+    <h1>Calculadora IMC</h1>
+    <p class="mensagemError">{{mensagemError}}</p>
+    <div class="content-input">
+      <label for="num1">Peso</label>
+      <div class="caixa-input">
+        <input type="number" name="num1" [(ngModel)]="peso" placeholder="0">
+      </div>
+    </div>
+
+    <div class="content-input">
+      <label for="num2">Altura</label>
+      <div class="caixa-input">
+        <input type="number" name="num2" [(ngModel)]="altura" placeholder="0">
+      </div>
+    </div>
+
+    <div class="btn-calculadora">
+      <button type="button" (click)="clicarCalculadora()">Calcular</button>
+    </div>
+
+    <div class="resultado">
+      <div class="numero">
+        <p><span class="destaque">{{calc | number: '1.0-2'}}</span></p>
+        <p>Seu IMC</p>
+      </div>
+      <div class="mensagem-imc">
+        <p>{{mensagemResultado}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
